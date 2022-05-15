@@ -1,0 +1,5 @@
+PageObject/PasswordForgotPage.class
+PageObject/RegistrationPage.class
+PageObject/AccountPage.class
+PageObject/LoginPage.class
+PageObject/MainPage.class
