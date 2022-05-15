@@ -25,6 +25,7 @@ public class ConstructorTests {
     @Description("Проверка перехода к разделу «Булки», добавление элемента в корзину")
     public void checkTransitionOfBunsButton() {
         MainPage main = open(MAIN_PAGE_URL, MainPage.class);
+        assertTrue("Check Bun section", main.checkSectionBunVisibility());
         assertTrue("After drag and drop the bun in the order basket must be visible", main.clickBunsButtonCheckTheSign());
     }
 
@@ -33,6 +34,7 @@ public class ConstructorTests {
     @Description("Проверка перехода к разделу «Соусы», добавление элемента в корзину")
     public void checkTransitionOfSaucesButton() {
         MainPage main = open(MAIN_PAGE_URL, MainPage.class);
+        assertTrue("Check Sauces section", main.checkSectionSaucesVisibility());
         assertTrue("After drag and drop the sauce in the order basket must be visible", main.clickSaucesButtonAndCheckTheSign());
     }
 
@@ -41,6 +43,7 @@ public class ConstructorTests {
     @Description("Проверка перехода к разделу «Начинки», добавление элемента в корзину")
     public void checkTransitionOfFillingButton() {
         MainPage main = open(MAIN_PAGE_URL, MainPage.class);
+        assertTrue("Check Bun section", main.checkSectionFillingsVisibility());
         assertTrue("After drag and drop the filling in the order basket must be visible", main.clickFillingButtonAndCheckTheSign());
     }
 }

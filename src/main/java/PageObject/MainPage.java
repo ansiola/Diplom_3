@@ -4,6 +4,8 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import static com.codeborne.selenide.Condition.visible;
+
 public class MainPage {
     //URL главной страницы
     public static final String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site/";
@@ -69,6 +71,27 @@ public class MainPage {
         personalAccountButton.click();
     }
 
+    //Проверка что секция "Булки" в поле видимости
+    @Step("Click the Bun section and check visibility")
+    public boolean checkSectionBunVisibility() {
+        bunsSign.should(visible);
+        return bunsSign.isDisplayed();
+    }
+
+    //Проверка что секция "Начинки" в поле видимости
+    @Step("Click the Fillings section and check visibility")
+    public boolean checkSectionFillingsVisibility() {
+        fillingsSign.should(visible);
+        return fillingsSign.isDisplayed();
+    }
+
+    //Проверка что секция "Соусы" в поле видимости
+    @Step("Click the Sauces section and check visibility")
+    public boolean checkSectionSaucesVisibility() {
+        saucesSign.should(visible);
+        return saucesSign.isDisplayed();
+    }
+    
     //Клик на кнопку "Начинки", перемещение элемента начинок в корзину, проверка его отображение в корзине
     @Step("Click the fillings button and check the sign")
     public boolean clickFillingButtonAndCheckTheSign() {

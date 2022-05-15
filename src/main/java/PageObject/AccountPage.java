@@ -18,7 +18,7 @@ public class AccountPage {
     @FindBy(how = How.XPATH, using = ".//p[text()='Конструктор']")
     private SelenideElement constructorButton;
     //Логотип бургер
-    @FindBy(how = How.XPATH, using = ".//*[@id='root']/div/header/nav/div/a")
+    @FindBy(how = How.XPATH, using = ".//div[@class=\"AppHeader_header__logo__2D0X2\"]")
     private SelenideElement logoButton;
 
     //Клик на кнопку "Выход"
